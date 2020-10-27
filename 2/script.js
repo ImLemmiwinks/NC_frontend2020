@@ -69,11 +69,11 @@ var employees = [
 	department: 'UX'
 }
 
-function FirstTask(employees) 
+function firstTask(employees) 
 {
-	let result = employees.sort((current, next) => 
-	current.surname.localeCompare(next.surname)).sort((current, next) => 
-	current.department.localeCompare(next.department)).map(current => {
+	let result = employees.sort((current, next) => current.surname.localeCompare(next.surname))
+	.sort((current, next) => current.department.localeCompare(next.department))
+	.map(current => {
 		return {
 		surname: current.surname,
 		name: current.name,
@@ -83,7 +83,7 @@ function FirstTask(employees)
 	return result;
 }
 
-function SecondTask(employees) 
+function secondTask(employees) 
 {
 	let map = new Map();
 	for (let i = 0; i < employees.length; i++) {
@@ -109,6 +109,5 @@ function SecondTask(employees)
 	return result;
 }
 
-
-console.log(FirstTask(employees));
-console.log(SecondTask(employees));
+console.log(firstTask(employees));
+console.log(secondTask(employees));
