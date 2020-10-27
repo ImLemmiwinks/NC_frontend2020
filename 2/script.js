@@ -71,28 +71,19 @@ var employees = [
 
 function FirstTask(employees) 
 {
-	employees.sort(function(a, b)
+	let result = employees.sort((current, next) => 
+	current.surname.localeCompare(next.surname)).sort((current, next) => 
+	current.department.localeCompare(next.department)).map(current => 
 	{
-		if (a.department < b.department) {return -1;}
-		if (a.department > b.department) {return -1;}
-		return 0
-	})
-	employees.sort(function(a, b)
-	{
-		if (a.surname < b.surname) {return -1;}
-		if (a.surname > b.surnameB) {return 1;}
-		return 0
-	})
-	for (let i = 0; i < employees.length; i++) 
-	{
-        employees[i] = 
-		{
-            surname: employees[i].surname,
-            name: employees[i].name,
-			department: employees[i].department
-		}
-	}
-	return employees;
+		const container ={};
+		container['surname'] = current.surname;
+		container['name'] = current.name;
+		container['department'] = current.department;
+		
+		return container;
+	});
+	
+	return result;
 }
 
 function SecondTask(employees) {
