@@ -80,7 +80,6 @@ function FirstTask(employees)
 		department: current.department
 		}
 	});
-	
 	return result;
 }
 
