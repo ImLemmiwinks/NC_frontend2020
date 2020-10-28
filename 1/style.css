@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-p
+*
 {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
+
+a, 
+p, 
+span
+{
+	-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	     -moz-user-select: none;
+	      -ms-user-select: none;
+	          user-select: none;    
+}	
 
 body
 {
@@ -13,9 +24,6 @@ body
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	
-	margin: 0px;
-	padding: 0px;
 	
 	background-color: #262b31;
 }
@@ -190,7 +198,7 @@ main
 	margin-bottom: 15px;
 }
 
-.banner-text-holder p
+.banner-upper-text
 {
 	font-style: normal;
 	font-weight: 400;
@@ -198,7 +206,7 @@ main
 	line-height: 150%;
 }
 
-.banner-text-holder span
+.banner-lower-text
 {
 	font-style: normal;
 	font-weight: 300;
@@ -222,12 +230,12 @@ main
 	height: 1px;
 }
 
-#active
+.active
 {
 	background-color: #FFFFFF;
 }
 
-#inactive
+.inactive
 {
 	background-color: #D9D6DA;
 }
@@ -244,12 +252,12 @@ main
     padding: 3px;
 }
 
-#left
+.left
 {
 	transform: rotate(135deg);
 }
 
-#right
+.right
 {
 	transform: rotate(-45deg);
 }
@@ -301,7 +309,7 @@ main
 	margin-bottom: 14px;
 }
 
-.other p
+.other-upper-text
 {
     width: 382px;
 	height: 80px;
@@ -309,23 +317,23 @@ main
 	margin-bottom: -5px;
 }
 
-.other span
+.other-lower-text
 {
 	width: 145px;
 	height: 30px;
 }
 
-#other1
+.other1
 {
 	background: url(OtherBackground1.png);
 }
 
-#other2
+.other2
 {
 	background: url(OtherBackground2.png);
 }
 
-#other3
+.other3
 {
 	background: url(OtherBackground3.png);
 }
@@ -347,13 +355,3 @@ footer
 	font-size: 28px;
 	line-height: 19px;
 }
-
-
-a, p, span
-{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;    
-}	
