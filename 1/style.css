@@ -70,18 +70,18 @@ a:hover
 	color: #FFFFFF;
 }
 
-.Name span
+.name
 {
 	font-size: 35px;
 	line-height: 42px;
 }
 
-.Game
+.game
 {
 	color: #17BC17;
 }
 
-.Shop
+.shop
 {
 	color: #FFFFFF;
 }
@@ -98,7 +98,7 @@ a:hover
 	margin-top: 4px;
 }
 
-.shoppingcart
+.shopping-cart
 {
 	background-image: url(ShoppingCart.svg);
 	
@@ -114,7 +114,7 @@ a:hover
 	height: 25px;
 }
 
-.LogIn
+.log-in
 {
 	display: flex;
 	justify-content: space-between;
@@ -124,7 +124,7 @@ a:hover
 	height: 23px;
 }
 
-.LogIn div
+.log-in-icon
 {
 	width: 22.18px;
 	height: 23px;
@@ -132,7 +132,9 @@ a:hover
 	background-image: url(LogInIcon.svg);
 }
 
-.LogIn:hover, .shoppingcart:hover, .search:hover
+.log-in:hover, 
+.shopping-cart:hover, 
+.search:hover
 {
 	filter: brightness(10);
 }
@@ -214,7 +216,7 @@ main
 	line-height: 200%;
 }
 
-.sliderprogress
+.slider-progress
 {
 	display: flex;
     	justify-content: space-between;
@@ -224,7 +226,7 @@ main
 	height: 1px;
 }
 
-.progresspart
+.progress-part
 {
 	width: 110px;
 	height: 1px;
@@ -269,7 +271,7 @@ main
 	border-width: 0 3px 3px 0;
 }
 
-.other-wrapper
+.card-list
 {
 	display: flex;
 	justify-content: space-between;
@@ -279,7 +281,7 @@ main
 	height: 230px;
 }
 
-.other
+.card
 {	
 	display: flex;
 	justify-content: center;
@@ -291,7 +293,7 @@ main
 	box-shadow: inset 0px -100px 5px -3px rgba(0, 0, 0, 0.75);
 }
 
-.other-text-wrapper
+.card-text-wrapper
 {
 	display: flex;
 	justify-content: space-between;
@@ -309,33 +311,18 @@ main
 	margin-bottom: 14px;
 }
 
-.other-upper-text
+.card-upper-text
 {
-   	width: 382px;
+    	width: 382px;
 	height: 80px;
 	
 	margin-bottom: -5px;
 }
 
-.other-lower-text
+.card-lower-text
 {
 	width: 145px;
 	height: 30px;
-}
-
-.other1
-{
-	background: url(OtherBackground1.png);
-}
-
-.other2
-{
-	background: url(OtherBackground2.png);
-}
-
-.other3
-{
-	background: url(OtherBackground3.png);
 }
 
 footer
