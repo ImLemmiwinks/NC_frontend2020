@@ -162,8 +162,8 @@ main
 {
 	display: flex;
 	flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    	justify-content: space-between;
+    	align-items: center;
 	
 	width: 1260px;
 	height: 580px;
@@ -217,8 +217,8 @@ main
 .sliderprogress
 {
 	display: flex;
-    justify-content: space-between;
-    align-items: center;
+    	justify-content: space-between;
+    	align-items: center;
 	
 	width: 1090px;
 	height: 1px;
@@ -245,11 +245,11 @@ main
 	display: inline-block;
 	
 	width: 20px;
-    height: 20px;
+    	height: 20px;
 	
-    border: 2px solid #D9D6DA;
-    border-width: 0 3px 3px 0;
-    padding: 3px;
+    	border: 2px solid #D9D6DA;
+    	border-width: 0 3px 3px 0;
+    	padding: 3px;
 }
 
 .left
@@ -311,7 +311,7 @@ main
 
 .other-upper-text
 {
-    width: 382px;
+   	width: 382px;
 	height: 80px;
 	
 	margin-bottom: -5px;
