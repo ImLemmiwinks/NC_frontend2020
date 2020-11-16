@@ -69,57 +69,45 @@ var employees = [
 	department: 'UX'
 }
 
-function FirstTask(employees) 
+function firstTask(employees) 
 {
-	employees.sort(function(a, b)
-	{
-		if (a.department < b.department) {return -1;}
-		if (a.department > b.department) {return -1;}
-		return 0
-	})
-	employees.sort(function(a, b)
-	{
-		if (a.surname < b.surname) {return -1;}
-		if (a.surname > b.surnameB) {return 1;}
-		return 0
-	})
-	for (let i = 0; i < employees.length; i++) 
-	{
-        employees[i] = 
-		{
-            surname: employees[i].surname,
-            name: employees[i].name,
-			department: employees[i].department
+	let result = employees.sort((current, next) => current.surname.localeCompare(next.surname))
+	.sort((current, next) => current.department.localeCompare(next.department))
+	.map(current => {
+		return {
+		surname: current.surname,
+		name: current.name,
+		department: current.department
 		}
-	}
-	return employees;
+	});
+	return result;
 }
 
-function SecondTask(employees) {
+function secondTask(employees) 
+{
 	let map = new Map();
 	for (let i = 0; i < employees.length; i++) {
-		let workers = employees[i];
-		let department = workers.department;
+		let employees2 = employees[i];
+		let department = employees2.department;
 		if (map.has(department)) {
-			let num = map.get(department);
-			map.set(department, ++num);
+			let count = map.get(department);
+			map.set(department, ++count);
 		} else {
 			map.set(department, 1);
 		}
 	}
-	let result = Array.from(map.entries()).map(function(pair) {
+	let result = Array.from(map.entries()).map(function(smth) 
+	{
 		return {
-			department: pair[0],
-			numEmployees: pair[1]
+			Department: smth[0],
+			HowManyEmployees: smth[1]
 		}
+	}).sort(function(a, b)
+	{
+		return b.HowManyEmployees - a.HowManyEmployees
 	});
-	result.sort(sorting);
 	return result;
 }
-function sorting (firstPair, secondPair) {
- 	return secondPair.numEmployees - firstPair.numEmployees;
-}
 
-
-console.log(FirstTask(employees));
-console.log(SecondTask(employees));
+console.log(firstTask(employees));
+console.log(secondTask(employees));
