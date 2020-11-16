@@ -5,73 +5,92 @@
 		<title>GameShop</title>
 		<link rel="stylesheet" href="style.css">
 		<meta charset="utf-8">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 	</head>
-	<body link="#D9D6DA" vlink="#D9D6DA" alink="#D9D6DA">
+	<body>
 		<header>
 				<nav>
-					<a class="Name" href="index.html">
-						<span class="Game">Game</span><span class="Shop">Shop</span>
+					<a class="name" href="index.html">
+						<span class="game">Game</span><span class="shop">Shop</span>
 					</a>
 					<div class="nav-wrapper">
-						<a href="">Магазин</a>
-						<a href="">Бандлы</a>
-						<a href="">Сообщество</a>
+						<a href="#">Магазин</a>
+						<a href="#">Бандлы</a>
+						<a href="#">Сообщество</a>
 					</div>
-					<a class="shoppingcart" href=""></a>
-					<a class="search" href=""></a>
-					<a class="LogIn" href="">
-						<div></div>
+					<a class="shopping-cart-wrapper" onclick="popup()">
+						<div class="shopping-cart"></div>
+						<p id="counter" class="items-counter"></p>
+					</a>
+					<a class="search" href="#"></a>
+					<a class="log-in" href="#">
+						<div class="log-in-icon"></div>
 						<span>Войти</span>
 					</a>
 				</nav>
 		</header>
 		
 		<main>
-			<div class="slider">
-				<div class="swipe" id="left"></div>
-				<div class="slider-main-part">
-					<div class="sliderprogress">
-						<div class="progresspart" id="active"></div>
-						<div class="progresspart" id="inactive"></div>
-						<div class="progresspart" id="inactive"></div>
-						<div class="progresspart" id="inactive"></div>
-						<div class="progresspart" id="inactive"></div>
-						<div class="progresspart" id="inactive"></div>
-						<div class="progresspart" id="inactive"></div>
-						<div class="progresspart" id="inactive"></div>
+			<div class="items-list-background">
+				<div class="items-list-holder">
+					<button style="width: 10px; height: 10px; align-self: flex-end; margin-right: 16px;" onclick="popupQuit()"></button>
+					<div class="items-list" id="itemsList">
 					</div>
-					<a class="banner" href="">
+				</div>
+			</div>			
+			<div class="slider">
+				<div class="swipe left"></div>
+				<div class="slider-main-part">
+					<div class="slider-progress">
+						<div class="progress-part active"></div>
+						<div class="progress-part inactive"></div>
+						<div class="progress-part inactive"></div>
+						<div class="progress-part inactive"></div>
+						<div class="progress-part inactive"></div>
+						<div class="progress-part inactive"></div>
+						<div class="progress-part inactive"></div>
+						<div class="progress-part inactive"></div>
+					</div>
+					<a class="banner" style="background: url(images/BannerBackground.jpg);" href="#">
 						<div class="banner-text-holder">
-							<p>А ты купил Skyrim для холодильника?</p>
-							<span>Купи Древние Свитки 5: Небесный рим со скидкой до 60%</span>
+							<p class="banner-upper-text">А ты купил Skyrim для холодильника?</p>
+							<span class="banner-lower-text">Купи Древние Свитки 5: Небесный рим со скидкой до 60%</span>
 						</div>
 					</a>
 				</div>
-				<div class="swipe" id="right"></div>
+				<div class="swipe right"></div>
 			</div>
-			<div class="other-wrapper">
-				<a class="other" href="" id="other1">
-					<div class="other-text-wrapper">
-						<p>Цельнометаллическая шестеренка: Отмщение</p>
-						<span>550 руб.</span>
+			<div class="card-list">
+				<a class="card" style="background: url(images/OtherBackground1.jpg);" href="#" onclick="addItemToCart(1, 'Цельнометаллическая шестеренка: Отмщение', 550)">
+					<div class="buy-slider">
+						<p class="buy-slider-text">Добавить в корзину</p>
+					</div>
+					<div class="card-text-wrapper">
+						<p class="card-upper-text">Цельнометаллическая шестеренка: Отмщение</p>
+						<span class="card-lower-text">550 руб.</span>
 					</div>
 				</a>
-				<a class="other" href="" id="other2">
-					<div class="other-text-wrapper">
-						<p>Аид</p>
-						<span>450 руб.</span>
+				<a class="card" style="background: url(images/OtherBackground2.jpg);" href="#" onclick="addItemToCart(2, 'Аид', 450)">
+					<div class="buy-slider">
+						<p class="buy-slider-text">Добавить в корзину</p>
+					</div>
+					<div class="card-text-wrapper">
+						<p class="card-upper-text">Аид</p>
+						<span class="card-lower-text">450 руб.</span>
 					</div>
 				</a>
-				<a class="other" href="" id="other3">
-					<div class="other-text-wrapper">
-						<p>Врата Балдура 3</p>
-						<span>1800 руб.</span>
+				<a class="card" style="background: url(images/OtherBackground3.jpg);" href="#" onclick="addItemToCart(3, 'Врата Балдура 3', 1800)">
+					<div class="buy-slider">
+						<p class="buy-slider-text">Добавить в корзину</p>
+					</div>
+					<div class="card-text-wrapper">
+						<p class="card-upper-text">Врата Балдура 3</p>
+						<span class="card-lower-text">1800 руб.</span>
 					</div>
 				</a>
 			</div>
 		</main>
-		
+		<script src="script.js"></script>
 		<footer>
 			<p>Здесь могла бы быть Ваша реклама</p>
 		</footer>
