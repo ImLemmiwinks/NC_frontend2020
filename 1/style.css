@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+a, 
+p, 
+span
+{
+	-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	     -moz-user-select: none;
+	      -ms-user-select: none;
+	          user-select: none;    
+}	
+
+body
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	
+	background-color: #262b31;
+}
+
+header
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+	height: 70px;
+	
+	background-color: #000000;
+	
+	position: sticky;
+	top: 0;
+	
+	font-family: 'Russo One', sans-serif;
+	color: #D9D6DA;
+	
+	font-size: 28px;
+	line-height: 19px;
+}
+
+nav
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 1260px;
+	height: 40px;
+}
+
+a
+{
+	text-decoration: none;
+	color: #D9D6DA;
+}
+
+a:hover
+{
+	color: #FFFFFF;
+	
+	cursor: pointer;
+}
+
+.name
+{
+	font-size: 35px;
+	line-height: 42px;
+}
+
+.game
+{
+	color: #17BC17;
+}
+
+.shop
+{
+	color: #FFFFFF;
+}
+
+.nav-wrapper
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	width: 505px;
+	height: 35px;
+	
+	margin-top: 4px;
+}
+
+.shopping-cart-wrapper
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	width: 70px;
+	height: 25px;
+}
+
+.shopping-cart-wrapper:hover
+{
+	filter: brightness(10);
+}
+
+.shopping-cart
+{	
+	align-self: flex-end;
+	
+	width: 28px;
+	height: 24px;
+	
+	background-image: url(images/ShoppingCart.svg);
+}
+
+.goods-counter
+{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	
+	width: 40px;
+	height: 25px;
+}
+
+.search
+{
+	background: url(images/search.svg);
+	
+	width: 26px;
+	height: 25px;
+}
+
+.log-in
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	
+	width: 115px;
+	height: 23px;
+}
+
+.log-in-icon
+{
+	width: 22.18px;
+	height: 23px;
+	
+	background-image: url(images/LogInIcon.svg);
+}
+
+.log-in:hover, 
+.shopping-cart:hover, 
+.search:hover
+{
+	filter: brightness(10);
+}
+
+.items-list-background
+{
+	visibility: hidden;
+	position: fixed;
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+	height: 100%;
+	
+	z-index: 2;
+}
+
+.items-list-holder
+{	
+	position: absolute;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	
+	height: 500px;
+	width: 800px;
+	
+	background-color: #FFFFFF;
+	
+	box-shadow: 0px 0px 50px 300px rgba(48, 48, 48, 0.8);
+}
+
+.items-list
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	
+	width: 750px;
+	height: 450px;
+	
+	overflow-y: scroll; 
+}
+
+.item-block
+{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	
+	width: 700px;
+	min-height: 80px;
+	
+	border: 1px solid black;
+	
+	margin-bottom: 5px;
+}
+
+main
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	
+	width: 1440px;
+	height: 920px;
+}
+
+.slider
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	width: 1370px;
+	height: 580px;
+}
+
+.slider-main-part
+{
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+	
+	width: 1260px;
+	height: 580px;
+}
+
+.banner
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 1260px;
+	height: 545px;
+	
+	box-shadow: inset 0px -150px 15px -15px rgba(0, 0, 0, 0.75);
+}
+
+.banner-text-holder
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	align-self: flex-end;
+	
+	width: 1220px;
+	height: 100px;
+	
+	font-family: Roboto;
+	
+	margin-bottom: 15px;
+}
+
+.banner-upper-text
+{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 150%;
+}
+
+.banner-lower-text
+{
+	font-style: normal;
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 200%;
+}
+
+.slider-progress
+{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	
+	width: 1090px;
+	height: 1px;
+}
+
+.progress-part
+{
+	width: 110px;
+	height: 1px;
+}
+
+.active
+{
+	background-color: #FFFFFF;
+}
+
+.inactive
+{
+	background-color: #D9D6DA;
+}
+
+.swipe
+{	
+	width: 20px;
+    height: 20px;
+	
+	border: 2px solid #D9D6DA;
+	border-width: 0 3px 3px 0;
+	padding: 3px;
+	
+	z-index: 1;
+}
+
+.left
+{
+	transform: rotate(135deg);
+}
+
+.right
+{
+	transform: rotate(-45deg);
+}
+
+.swipe:hover
+{
+	cursor: pointer;
+	border: 2px solid #FFFFFF;
+	border-width: 0 3px 3px 0;
+}
+
+.card-list
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	width: 1260px;
+	height: 230px;
+}
+
+.card
+{	
+	position: relative;
+	display: flex;
+	justify-content: center;
+	
+	overflow: hidden;
+	
+	width: 400px;
+	height: 230px;
+	
+	z-index: 1;
+}
+
+.buy-slider
+{
+	position: absolute;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	top: -230px;
+	
+	width: 400px;
+	height: 230px;
+	
+	box-shadow: inset 0px 235px rgba(0, 0, 0, 0.75);
+	
+	transition: top 0.9s;
+}
+
+.card:hover .buy-slider
+{
+	top: 0px;
+}
+
+.buy-slider-text
+{
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 150%;
+}
+
+.card-text-wrapper
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	align-self: flex-end;
+	
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 150%;
+	
+	width: 382px;
+	height: 80px;
+	
+	margin-bottom: 14px;
+	
+	box-shadow: 0px 9px 4px 13px rgba(0, 0, 0, 0.75), inset 0px 80px 0px rgba(0, 0, 0, 0.75);
+	
+	transition: margin-bottom 1s;
+}
+
+.card:hover .card-text-wrapper
+{
+	margin-bottom: -85px;
+}
+
+.card-upper-text
+{
+    width: 382px;
+	height: 80px;
+	
+	margin-bottom: -5px;
+}
+
+.card-lower-text
+{
+	width: 145px;
+	height: 30px;
+}
+
+footer
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+	height: 100px;
+	
+	background-color: #000000;
+	
+	font-family: 'Russo One', sans-serif;
+	color: #D9D6DA;
+	
+	font-size: 28px;
+	line-height: 19px;
+}
