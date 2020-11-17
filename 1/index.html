@@ -18,10 +18,10 @@
 						<a href="#">Бандлы</a>
 						<a href="#">Сообщество</a>
 					</div>
-					<a class="shopping-cart-wrapper" onclick="popup()">
+					<div class="shopping-cart-wrapper" onclick="openPopup()">
 						<div class="shopping-cart"></div>
 						<p id="counter" class="items-counter"></p>
-					</a>
+					</div>
 					<a class="search" href="#"></a>
 					<a class="log-in" href="#">
 						<div class="log-in-icon"></div>
@@ -31,9 +31,9 @@
 		</header>
 		
 		<main>
-			<div class="items-list-background">
+			<div class="overlay">
 				<div class="items-list-holder">
-					<button style="width: 10px; height: 10px; align-self: flex-end; margin-right: 16px;" onclick="popupQuit()"></button>
+					<button style="width: 10px; height: 10px; align-self: flex-end; margin-right: 16px;" onclick="quitPopup()"></button>
 					<div class="items-list" id="itemsList">
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 				<div class="swipe right"></div>
 			</div>
 			<div class="card-list">
-				<a class="card" style="background: url(images/OtherBackground1.jpg);" href="#" onclick="addItemToCart(1, 'Цельнометаллическая шестеренка: Отмщение', 550)">
+				<div class="card" style="background: url(images/OtherBackground1.jpg);" onclick="addItemToCart(1, 'Цельнометаллическая шестеренка: Отмщение', 550)">
 					<div class="buy-slider">
 						<p class="buy-slider-text">Добавить в корзину</p>
 					</div>
@@ -69,8 +69,8 @@
 						<p class="card-upper-text">Цельнометаллическая шестеренка: Отмщение</p>
 						<span class="card-lower-text">550 руб.</span>
 					</div>
-				</a>
-				<a class="card" style="background: url(images/OtherBackground2.jpg);" href="#" onclick="addItemToCart(2, 'Аид', 450)">
+				</div>
+				<div class="card" style="background: url(images/OtherBackground2.jpg);" onclick="addItemToCart(2, 'Аид', 450)">
 					<div class="buy-slider">
 						<p class="buy-slider-text">Добавить в корзину</p>
 					</div>
@@ -78,8 +78,8 @@
 						<p class="card-upper-text">Аид</p>
 						<span class="card-lower-text">450 руб.</span>
 					</div>
-				</a>
-				<a class="card" style="background: url(images/OtherBackground3.jpg);" href="#" onclick="addItemToCart(3, 'Врата Балдура 3', 1800)">
+				</div>
+				<div class="card" style="background: url(images/OtherBackground3.jpg);" onclick="addItemToCart(3, 'Врата Балдура 3', 1800)">
 					<div class="buy-slider">
 						<p class="buy-slider-text">Добавить в корзину</p>
 					</div>
@@ -87,7 +87,7 @@
 						<p class="card-upper-text">Врата Балдура 3</p>
 						<span class="card-lower-text">1800 руб.</span>
 					</div>
-				</a>
+				</div>
 			</div>
 		</main>
 		<script src="script.js"></script>
