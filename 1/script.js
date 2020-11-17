@@ -36,8 +36,7 @@ function openPopup() {
 			<span>Кол-во: ${quantity}</span>
 			<span>Общая цена: ${price*quantity} </span>
 		</div>
-		`;
-	});
+		`;});
 	itemsList.innerHTML = template;
 	document.querySelector(".overlay").style.visibility = 'visible';
 }
