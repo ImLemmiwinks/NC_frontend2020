@@ -113,6 +113,8 @@ a:hover
 .shopping-cart-wrapper:hover
 {
 	filter: brightness(10);
+	
+	cursor: pointer;
 }
 
 .shopping-cart
@@ -168,7 +170,7 @@ a:hover
 	filter: brightness(10);
 }
 
-.items-list-background
+.overlay
 {
 	visibility: hidden;
 	position: fixed;
@@ -216,15 +218,17 @@ a:hover
 .item-block
 {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	
-	width: 700px;
-	min-height: 80px;
+	width: 680px;
+	min-height: 65px;
 	
 	border: 1px solid black;
 	
 	margin-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 main
@@ -269,6 +273,8 @@ main
 	height: 545px;
 	
 	box-shadow: inset 0px -150px 15px -15px rgba(0, 0, 0, 0.75);
+	
+	color: #D9D6DA;
 }
 
 .banner-text-holder
@@ -365,7 +371,6 @@ main
 	align-items: center;
 	
 	width: 1260px;
-	height: 230px;
 }
 
 .card
@@ -380,6 +385,15 @@ main
 	height: 230px;
 	
 	z-index: 1;
+	
+	color: #D9D6DA;
+}
+
+.card:hover
+{
+	color: #FFFFFF;
+	
+	cursor: pointer;
 }
 
 .buy-slider
