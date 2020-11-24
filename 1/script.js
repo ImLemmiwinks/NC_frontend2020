@@ -1,15 +1,9 @@
-/*
-const goods = [{id: 1, name: "Цельнометаллическая шестеренка: Отмщение", textPrice: "550 руб.", price: 550},
-			 {id: 2, name: "Аид", textPrice: "450 руб.", price: 450},
-			 {id: 3, name: "Врата Балдура 3", textPrice: "1800 руб.", price: 1800}
-			];
-*/
-
 let counter = 0;
 const goodsCounterElement = document.getElementById('counter');
 const itemsList = document.getElementById('itemsList');
-let items = new Map();
-
+const items = new Map(); 
+const loader = document.querySelector('.loader');
+const overlay = document.querySelector(".overlay");
 
 function addItemToCart(id, title, price) {
 	counter++;
@@ -22,11 +16,13 @@ function addItemToCart(id, title, price) {
 		price: price,
 		quantity: 1,
 		});
-
 	};
 }
 
 function openPopup() {
+	overlay.style.visibility = 'visible';
+	loader.style.visibility = 'visible';
+	setTimeout(function () {
 	let template = ``;
 	items.forEach(({title, price, quantity})=>{
 		template += `
@@ -34,13 +30,15 @@ function openPopup() {
 			<span>${title}</span>
 			<span>За 1 шт: ${price} руб.</span>
 			<span>Кол-во: ${quantity}</span>
-			<span>Общая цена: ${price*quantity} </span>
+			<span>Общая цена: ${price*quantity}</span>
 		</div>
-		`;});
+		`;
+	});
+	loader.style.visibility = 'hidden';
 	itemsList.innerHTML = template;
-	document.querySelector(".overlay").style.visibility = 'visible';
+}, 2000); 
 }
 
 function quitPopup() {
-  document.querySelector(".overlay").style.visibility = 'hidden';
+  overlay.style.visibility = 'hidden';
 }
