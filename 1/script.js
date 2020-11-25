@@ -20,23 +20,23 @@ function addItemToCart(id, title, price) {
 }
 
 function openPopup() {
-	overlay.style.visibility = 'visible';
 	loader.style.visibility = 'visible';
 	setTimeout(function () {
-	let template = ``;
-	items.forEach(({title, price, quantity})=>{
-		template += `
-		<div class="item-block">
-			<span>${title}</span>
-			<span>За 1 шт: ${price} руб.</span>
-			<span>Кол-во: ${quantity}</span>
-			<span>Общая цена: ${price*quantity}</span>
-		</div>
-		`;
-	});
+		overlay.style.visibility = 'visible';
+		let template = ``;
+		items.forEach(({title, price, quantity})=>{
+			template += `
+			<div class="item-block">
+				<span>${title}</span>
+				<span>За 1 шт: ${price} руб.</span>
+				<span>Кол-во: ${quantity}</span>
+				<span>Общая цена: ${price*quantity}</span>
+			</div>
+			`;
+		});
 	loader.style.visibility = 'hidden';
 	itemsList.innerHTML = template;
-}, 2000); 
+	}, 2000); 
 }
 
 function quitPopup() {

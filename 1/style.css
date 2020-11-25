@@ -186,16 +186,18 @@ a:hover
 }
 
 .loader {
-	position: absolute;
+	position: fixed;
 	align-self: center;
-	width: 62px;
-	height: 62px;
+	width: 186px;
+	height: 186px;
 	border-radius: 50%;
 		-webkit-border-radius: 50%;
 	perspective: 780px;
 	align-self: center;
 	
 	visibility: hidden;
+	
+	z-index: 3;
 }
 
 .loader.show
@@ -220,7 +222,7 @@ a:hover
 	top: 0%;
 	animation: loader-rotate-one 1.15s linear infinite;
 		-webkit-animation: loader-rotate-one 1.15s linear infinite;
-	border-bottom: 3px solid rgb(23,188,23);
+	border-bottom: 20px solid rgb(255,255,255);
 }
 
 .loader__inner.loader__inner__two  {
@@ -228,7 +230,7 @@ a:hover
 	top: 0%;
 	animation: loader-rotate-two 1.15s linear infinite;
 		-webkit-animation: loader-rotate-two 1.15s linear infinite;
-	border-right: 3px solid rgb(85,84,85);
+	border-right: 20px solid rgb(255,255,255);
 }
 
 .loader__inner.loader__inner__three  {
@@ -236,7 +238,7 @@ a:hover
 	bottom: 0%;
 	animation: loader-rotate-three 1.15s linear infinite;
 		-webkit-animation: loader-rotate-three 1.15s linear infinite;
-	border-top: 3px solid rgb(0,0,0);
+	border-top: 20px solid rgb(255,255,255);
 }
 
 @-webkit-keyframes loader-rotate-one {
