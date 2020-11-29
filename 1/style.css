@@ -365,7 +365,7 @@
 	margin-bottom: 15px;
 }
 
-.banner__text__top {
+.banner__text-top {
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -378,7 +378,7 @@
 	padding: 0;
 }
 
-.banner__text__bottom {
+.banner__text-bottom {
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-weight: 300;
@@ -391,11 +391,11 @@
 	padding: 0;
 }
 
-.banner:hover .banner__text__top {
+.banner:hover .banner__text-top {
 	color: #FFFFFF;
 }
 
-.banner:hover .banner__text__bottom {
+.banner:hover .banner__text-bottom {
 	color: #FFFFFF;
 }
 
@@ -494,7 +494,7 @@
 	top: 0px;
 }
 
-.card__slider__text {
+.card__slider-text {
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
 	font-weight: 300;
@@ -523,7 +523,7 @@
 	margin-bottom: -85px;
 }
 
-.card__text__top {
+.card__text-top {
     width: 382px;
 	height: 80px;
 	
@@ -538,7 +538,7 @@
 	color: #D9D6DA;
 }
 
-.card__text__bottom {
+.card__text-bottom {
 	width: 145px;
 	height: 30px;
 	
