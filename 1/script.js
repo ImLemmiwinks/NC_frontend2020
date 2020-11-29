@@ -26,7 +26,7 @@ function openPopup() {
 		let template = ``;
 		items.forEach(({title, price, quantity})=>{
 			template += `
-			<div class="item-block">
+			<div class="item">
 				<span>${title}</span>
 				<span>За 1 шт: ${price} руб.</span>
 				<span>Кол-во: ${quantity}</span>
