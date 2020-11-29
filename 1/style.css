@@ -446,7 +446,7 @@
 	border-width: 0 3px 3px 0;
 }
 
-.card__container {
+.card-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
