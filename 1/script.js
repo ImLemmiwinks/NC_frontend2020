@@ -15,6 +15,7 @@ function addItemToCart(id, title, price) {
 		title: title,
 		price: price,
 		quantity: 1,
+		gameID: id
 		});
 	};
 }
@@ -24,13 +25,14 @@ function openPopup() {
 	setTimeout(function () {
 		overlay.style.visibility = 'visible';
 		let template = ``;
-		items.forEach(({title, price, quantity})=>{
+		items.forEach(({title, price, quantity, gameID})=>{
 			template += `
-			<div class="item">
+			<div class="item item-${gameID}">
 				<span>${title}</span>
 				<span>За 1 шт: ${price} руб.</span>
 				<span>Кол-во: ${quantity}</span>
 				<span>Общая цена: ${price*quantity}</span>
+				<div style="height: 10px; width: 10px; background-color: red;" onclick="deleteItem(${gameID})"></div>
 			</div>
 			`;
 		});
@@ -41,4 +43,13 @@ function openPopup() {
 
 function quitPopup() {
   overlay.style.visibility = 'hidden';
+}
+
+
+function deleteItem (gameID) {
+	const currentItem = document.querySelector(".item-"+gameID);
+	currentItem.remove();
+	counter -= items.get(gameID).quantity;
+	goodsCounterElement.innerText = counter;
+	items.delete(gameID);
 }
