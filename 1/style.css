@@ -171,7 +171,6 @@
 	align-items: center;
 	
 	width: 1440px;
-	height: 920px;
 }
 
 .loader {
@@ -304,7 +303,7 @@
 	width: 750px;
 	height: 450px;
 	
-	overflow-y: scroll; 
+	overflow-y: auto; 
 }
 
 .item {
@@ -329,6 +328,8 @@
 	
 	width: 1370px;
 	height: 580px;
+	
+	margin-top: 35px;
 }
 
 .slider__container {
@@ -454,6 +455,9 @@
 	align-items: center;
 	
 	width: 1260px;
+	flex-wrap: wrap;
+	
+	margin-bottom: 35px;
 }
 
 .card {	
@@ -467,6 +471,8 @@
 	height: 230px;
 	
 	z-index: 1;
+	
+	margin-top: 20px;
 }
 
 .card:hover {
