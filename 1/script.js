@@ -1,5 +1,6 @@
 let counter = 0;
 const goodsCounterElement = document.getElementById('counter');
+const goodsCounterElementTwo = document.getElementById('menu-counter');
 const itemsList = document.getElementById('itemsList');
 const items = new Map(); 
 const loader = document.querySelector('.loader');
@@ -8,6 +9,7 @@ const overlay = document.querySelector(".overlay");
 function addItemToCart(id, title, price) {
 	counter++;
 	goodsCounterElement.innerText = counter;
+	goodsCounterElementTwo.innerText = counter;
 	if (items.has(id)) {
 		items.get(id).quantity++;
 	} else {
@@ -51,5 +53,6 @@ function deleteItem (gameID) {
 	currentItem.remove();
 	counter -= items.get(gameID).quantity;
 	goodsCounterElement.innerText = counter;
+	goodsCounterElementTwo.innerText = counter;
 	items.delete(gameID);
 }
