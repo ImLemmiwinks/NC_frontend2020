@@ -351,7 +351,16 @@
 	justify-content: space-evenly;
 	align-items: center;
 	
-	width: 1440px;
+	max-width: 1440px;
+	width: 100%;
+}
+
+.main__splitter {
+	width: 89%;
+	
+	color: #858585;
+	
+	margin-top: 20px;
 }
 
 .loader {
@@ -507,10 +516,10 @@
 	justify-content: space-between;
 	align-items: center;
 	
-	width: 1370px;
-	height: 580px;
+	max-width: 1370px;
+	width: 93%;
 	
-	margin-top: 35px;
+	margin-top: 25px;
 }
 
 .slider__container {
@@ -519,8 +528,7 @@
     justify-content: space-between;
     align-items: center;
 	
-	width: 1260px;
-	height: 580px;
+	width: 94%;
 }
 
 .banner {
@@ -529,7 +537,8 @@
 	align-items: center;
 	
 	width: 100%;
-	height: 94%;
+	min-width: 430px;
+	padding-top: 34%;
 	
 	box-shadow: inset 0px -150px 15px -15px rgba(0, 0, 0, 0.75);
 	
@@ -543,7 +552,7 @@
 	
 	align-self: flex-end;
 	
-	width: 1220px;
+	width: 95%;
 	height: 100px;
 	
 	margin-bottom: 15px;
@@ -590,6 +599,8 @@
 	
 	width: 65vw;
 	height: 5px;
+	
+	padding-bottom: 20px;
 }
 
 .slider__progress-part {
@@ -605,7 +616,7 @@
 	background-color: #858585;
 }
 
-.slider__swipe {	
+.slider__swipe {
 	width: 20px;
     height: 20px;
 	
@@ -763,6 +774,16 @@
 	padding: 15px;
 }
 
+@media (max-width: 1440px) {
+	.slider__swipe {
+		display: none;
+	}
+	
+	.slider {
+		justify-content: center;
+	}
+}
+
 @media (min-width: 1300px) {
 	.card-container {
 		width: 1290px;
@@ -788,13 +809,15 @@
 	}
 }
 
-@media (max-width: 810px) {
+@media (max-width: 825px) {
 	.items-list {
 		width: 95vw;
 	}
+	
 	.items-list__container {
 		width: 84vw;
 	}
+	
 	.item {
 		flex-direction: column;
 		align-items: flex-start;
@@ -804,16 +827,44 @@
 		
 		padding: 5px;
 	}
+	
+	.banner__text-bottom {
+		font-size: 28px;
+	}
 }
 
 @media (max-width: 768px) {
 	.menu__box {
 		width: 50%;
 	}
+	
+	.banner__text-top {
+		font-size: 4.5vw;
+	}
+	
+	.banner__text-bottom {
+		font-size: 3.5vw;
+	}
 }
 
 @media (max-width: 480px) {
 	.menu__box {
 		width: 55%;
+	}
+
+	.banner {
+		box-shadow: inset 0px -110px 15px -15px rgba(0, 0, 0, 0.75);
+	}
+	
+	.banner__text {
+		height: 70px;
+	}
+	
+	.banner__text-top {
+		font-size: 22px;
+	}
+	
+	.banner__text-bottom {
+		font-size: 17px;
 	}
 }	
